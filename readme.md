@@ -12,3 +12,9 @@ php artisan queue:test
 ```
 
 を叩くと、60秒置きにジョブが実行されてしまう。
+
+# laravel-sendgrid-driverのサンプル＆ベンチマーク用コマンド
+
+```
+php artisan sendgrid:sample
+```
