@@ -155,6 +155,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Sichikawa\LaravelSendgridDriver\MailServiceProvider::class,
+        Sleimanx2\Plastic\PlasticServiceProvider::class,
 
         /*
          * Development Service Provider

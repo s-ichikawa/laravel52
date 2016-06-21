@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "s-ichikawa/laravel-sendgrid-driver": "dev-master",
         "barryvdh/laravel-ide-helper": "^2.2",
-        "devster/ubench": "^1.2"
+        "devster/ubench": "^1.2",
+        "sleimanx2/plastic": "^0.1.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
