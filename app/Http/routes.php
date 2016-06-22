@@ -32,3 +32,10 @@ Route::group(['prefix' => 'elasticsearch'], function () {
     });
 });
 
+Route::get('events', function() {
+    return view('events');
+});
+Route::get('events/search', function () {
+    $result = \App\Event::search()->multiMatch(['title', 'catch', 'description'], Request::get('keyword'), ['fuzziness' => '2'])->get();
+    return Response::json($result->hits());
+});

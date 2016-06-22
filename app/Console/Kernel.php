@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\EventSearch;
 use App\Console\Commands\QueueTest;
 use App\Console\Commands\SendGridSample;
 use Illuminate\Console\Scheduling\Schedule;
@@ -18,6 +19,7 @@ class Kernel extends ConsoleKernel
         // Commands\Inspire::class,
         QueueTest::class,
         SendGridSample::class,
+        EventSearch::class,
     ];
 
     /**
