@@ -19,8 +19,8 @@ php artisan queue:test
 php artisan sendgrid:sample
 ```
 
-# sleimanx2/plasticを使ってリアルタイム検索
+# sleimanx2/plasticを使ってインクリメンタルサーチ
 
-ConnpassのAPIからイベントデータ取得してElasticSearch入れてインスタント検索してみた
+ConnpassのAPIからイベントデータ取得してElasticSearch入れてインクリメンタルサーチしてみた
 
-![インスタントサーチ](./InstantSearch.gif "インスタントサーチ")
+![インクリメンタルサーチ](./IncrementalSearch.gif "インクリメンタルサーチ")
