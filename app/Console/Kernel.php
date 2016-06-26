@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\Batch;
 use App\Console\Commands\EventSearch;
 use App\Console\Commands\QueueTest;
 use App\Console\Commands\SendGridSample;
@@ -20,6 +21,7 @@ class Kernel extends ConsoleKernel
         QueueTest::class,
         SendGridSample::class,
         EventSearch::class,
+        Batch::class
     ];
 
     /**
