@@ -6,6 +6,7 @@ use App\Console\Commands\Batch;
 use App\Console\Commands\EventSearch;
 use App\Console\Commands\QueueTest;
 use App\Console\Commands\SendGridSample;
+use App\Console\Commands\SendGridWithTemplate;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -20,6 +21,7 @@ class Kernel extends ConsoleKernel
         // Commands\Inspire::class,
         QueueTest::class,
         SendGridSample::class,
+        SendGridWithTemplate::class,
         EventSearch::class,
         Batch::class
     ];
