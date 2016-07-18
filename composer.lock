@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e65d7453a24a83c60ebadd0ec32e7a0e",
-    "content-hash": "276dbc453038a00d936b8c6786057b15",
+    "hash": "86b3b2e9ca214053203a05f90492fa38",
+    "content-hash": "1754fe280df9a1f917731d8f3211403a",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1525,16 +1525,16 @@
         },
         {
             "name": "s-ichikawa/laravel-sendgrid-driver-v3",
-            "version": "v5.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s-ichikawa/laravel-sendgrid-driver-v3.git",
-                "reference": "eac08d37d7838712254dbb86a986908044b90144"
+                "reference": "231c8eeff7725cbf1b654d272e489d1600558224"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver-v3/zipball/eac08d37d7838712254dbb86a986908044b90144",
-                "reference": "eac08d37d7838712254dbb86a986908044b90144",
+                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver-v3/zipball/231c8eeff7725cbf1b654d272e489d1600558224",
+                "reference": "231c8eeff7725cbf1b654d272e489d1600558224",
                 "shasum": ""
             },
             "require": {
@@ -1564,7 +1564,7 @@
                 }
             ],
             "description": "This liblary can add sendgrid driver into the laravel's mail configure.",
-            "time": "2016-07-09 12:32:29"
+            "time": "2016-07-12 12:04:37"
         },
         {
             "name": "sleimanx2/plastic",
@@ -4012,7 +4012,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "s-ichikawa/laravel-sendgrid-driver-v3": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

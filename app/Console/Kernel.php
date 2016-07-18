@@ -4,6 +4,7 @@ namespace App\Console;
 
 use App\Console\Commands\Batch;
 use App\Console\Commands\EventSearch;
+use App\Console\Commands\GuzzleAsync;
 use App\Console\Commands\QueueTest;
 use App\Console\Commands\SendGridSample;
 use App\Console\Commands\SendGridWithTemplate;
@@ -23,7 +24,8 @@ class Kernel extends ConsoleKernel
         SendGridSample::class,
         SendGridWithTemplate::class,
         EventSearch::class,
-        Batch::class
+        Batch::class,
+        GuzzleAsync::class,
     ];
 
     /**
