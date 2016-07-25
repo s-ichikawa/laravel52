@@ -40,6 +40,6 @@ class EloquentSample extends Command
     {
         $phone = User::find(1)->phone;
 
-        var_dump($phone->toArray());
+        var_dump($phone->all());
     }
 }
