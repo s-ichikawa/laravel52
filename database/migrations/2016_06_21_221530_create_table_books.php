@@ -16,8 +16,8 @@ class CreateTableBooks extends Migration
             $table->increments('id');
             $table->text('name');
             $table->text('body');
-            $table->json('tags');
-            $table->json('images');
+            $table->binary('tags');
+            $table->binary('images');
             $table->timestamps();
         });
     }
