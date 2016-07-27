@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CountryTableSeeder extends Seeder
+class CountriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

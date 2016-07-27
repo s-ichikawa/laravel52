@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Post;
 use App\User;
 use Illuminate\Console\Command;
 
@@ -38,8 +39,21 @@ class EloquentSample extends Command
      */
     public function handle()
     {
-        $user = User::find(1);
+        $user = User::first();
+        // hasOne
         echo $user->phone->number . PHP_EOL;
+        // belongsTo
         echo $user->country->name . PHP_EOL;
+        // belongsToMany
+        foreach ($user->roles as $role) {
+            echo $role->name . PHP_EOL;
+        }
+
+
+        $post = Post::find(1);
+        // hasMany
+        foreach ($post->comments as $comment) {
+            echo $comment->content . PHP_EOL;
+        }
     }
 }

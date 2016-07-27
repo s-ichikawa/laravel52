@@ -33,9 +33,21 @@ class User extends Authenticatable
         return $this->hasOne(Phone::class);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function country()
     {
         // 外部キーをこのテーブルが持っていたらbelongsTo
         return $this->belongsTo(Country::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function roles()
+    {
+        // 中間テーブルがある場合
+        return $this->belongsToMany(Role::class);
     }
 }
