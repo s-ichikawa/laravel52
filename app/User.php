@@ -29,6 +29,13 @@ class User extends Authenticatable
      */
     public function phone()
     {
+        // 外部キーを他のテーブルが持っていたらhasOne
         return $this->hasOne(Phone::class);
+    }
+
+    public function country()
+    {
+        // 外部キーをこのテーブルが持っていたらbelongsTo
+        return $this->belongsTo(Country::class);
     }
 }

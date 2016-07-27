@@ -17,6 +17,8 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->integer('country_id');
             $table->text('name');
+            $table->text('email');
+            $table->text('password');
         });
     }
 

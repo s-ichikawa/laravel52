@@ -38,8 +38,8 @@ class EloquentSample extends Command
      */
     public function handle()
     {
-        $phone = User::find(1)->phone;
-
-        var_dump($phone->all());
+        $user = User::find(1);
+        echo $user->phone->number . PHP_EOL;
+        echo $user->country->name . PHP_EOL;
     }
 }

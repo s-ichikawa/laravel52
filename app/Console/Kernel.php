@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\Batch;
+use App\Console\Commands\EloquentSample;
 use App\Console\Commands\EventSearch;
 use App\Console\Commands\GuzzleAsync;
 use App\Console\Commands\QueueTest;
@@ -26,6 +27,7 @@ class Kernel extends ConsoleKernel
         EventSearch::class,
         Batch::class,
         GuzzleAsync::class,
+        EloquentSample::class,
     ];
 
     /**
