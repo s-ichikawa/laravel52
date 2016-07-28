@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Phone;
 use App\Post;
 use App\User;
 use Illuminate\Console\Command;
@@ -40,10 +41,15 @@ class EloquentSample extends Command
     public function handle()
     {
         $user = User::first();
+
         // hasOne
         echo $user->phone->number . PHP_EOL;
+
         // belongsTo
+        $phone = Phone::where('user_id', $user->id)->first();
+        echo $phone->user->name . PHP_EOL;
         echo $user->country->name . PHP_EOL;
+
         // belongsToMany
         foreach ($user->roles as $role) {
             echo $role->name . PHP_EOL;
