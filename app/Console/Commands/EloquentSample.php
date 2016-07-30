@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Country;
 use App\Phone;
 use App\Post;
 use App\User;
@@ -60,6 +61,11 @@ class EloquentSample extends Command
         // hasMany
         foreach ($post->comments as $comment) {
             echo $comment->content . PHP_EOL;
+        }
+
+        // hasManyThrough
+        foreach (Country::find(1)->posts as $post) {
+            echo $post->title . PHP_EOL;
         }
     }
 }
