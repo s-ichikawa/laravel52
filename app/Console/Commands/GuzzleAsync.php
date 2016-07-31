@@ -44,7 +44,7 @@ class GuzzleAsync extends Command
         $bench = new \Ubench();
         $bench->start();
 
-        $client = new Client(['base_uri' => 'http://laracon.jp/']);
+        $client = new Client(['base_uri' => 'http://example.com/']);
 
         $promises = [
             $client->postAsync('/test')
