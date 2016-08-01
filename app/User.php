@@ -48,6 +48,6 @@ class User extends Authenticatable
     public function roles()
     {
         // 中間テーブルがある場合
-        return $this->belongsToMany(Role::class);
+        return $this->belongsToMany(Role::class)->withTimestamps();
     }
 }

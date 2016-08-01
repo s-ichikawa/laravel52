@@ -53,7 +53,7 @@ class EloquentSample extends Command
 
         // belongsToMany
         foreach ($user->roles as $role) {
-            echo $role->name . PHP_EOL;
+            echo $role->pivot->created_at . ':' . $role->name . PHP_EOL;
         }
 
 
