@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Country;
 use App\Phone;
 use App\Post;
+use App\Staff;
 use App\User;
 use Illuminate\Console\Command;
 
@@ -66,6 +67,13 @@ class EloquentSample extends Command
         // hasManyThrough
         foreach (Country::find(1)->posts as $post) {
             echo $post->title . PHP_EOL;
+        }
+
+        $staff = Staff::find(1);
+
+        // Polymorphic Relations
+        foreach ($staff->photos as $photo) {
+            echo $photo->path . PHP_EOL;
         }
     }
 }
