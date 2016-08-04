@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Country;
 use App\Phone;
+use App\Photo;
 use App\Post;
 use App\Staff;
 use App\User;
@@ -75,5 +76,10 @@ class EloquentSample extends Command
         foreach ($staff->photos as $photo) {
             echo $photo->path . PHP_EOL;
         }
+
+        $photo = Photo::find(1);
+
+        $imageable = $photo->imageable;
+        echo $imageable . PHP_EOL;
     }
 }
