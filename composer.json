@@ -10,7 +10,9 @@
         "barryvdh/laravel-ide-helper": "^2.2",
         "devster/ubench": "^1.2",
         "sleimanx2/plastic": "^0.1.5",
-        "s-ichikawa/laravel-sendgrid-driver-v3": "dev-master"
+        "s-ichikawa/laravel-sendgrid-driver-v3": "dev-master",
+        "fabpot/goutte": "^3.1",
+        "maknz/slack": "^1.7"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

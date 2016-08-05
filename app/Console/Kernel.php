@@ -6,6 +6,7 @@ use App\Console\Commands\Batch;
 use App\Console\Commands\EloquentSample;
 use App\Console\Commands\EventSearch;
 use App\Console\Commands\GuzzleAsync;
+use App\Console\Commands\OlympicLive;
 use App\Console\Commands\QueueTest;
 use App\Console\Commands\SendGridSample;
 use App\Console\Commands\SendGridWithTemplate;
@@ -28,6 +29,7 @@ class Kernel extends ConsoleKernel
         Batch::class,
         GuzzleAsync::class,
         EloquentSample::class,
+        OlympicLive::class,
     ];
 
     /**
