@@ -14,7 +14,7 @@ class OlympicLive extends Command
      *
      * @var string
      */
-    protected $signature = 'olympic:live';
+    protected $signature = 'olympic:live {url}';
 
     /**
      * The console command description.
@@ -47,7 +47,7 @@ class OlympicLive extends Command
 
         $current_content = null;
         while (true) {
-            $crawler = $client->request('GET', 'http://live.sportsnavi.yahoo.co.jp/rio2016/live/6386/');
+            $crawler = $client->request('GET', $this->argument('url'));
             $nodes = $crawler->filter('div.paragraph')->getNode(0);
 
 
