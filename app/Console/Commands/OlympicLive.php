@@ -42,7 +42,7 @@ class OlympicLive extends Command
     {
 
         $client = new Client();
-        $slack = new Slack('https://hooks.slack.com/services/');
+        $slack = new Slack(config('services.slack.channel'));
         $message = new Message($slack);
 
         $current_content = null;
