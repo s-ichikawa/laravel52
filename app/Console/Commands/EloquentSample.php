@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Book;
 use App\Country;
 use App\Phone;
 use App\Photo;

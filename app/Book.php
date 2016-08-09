@@ -21,4 +21,9 @@ class Book extends Model
             'tags' => $this->tags,
         ];
     }
+
+    public function author()
+    {
+        return $this->belongsTo(Author::class);
+    }
 }
