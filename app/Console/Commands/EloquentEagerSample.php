@@ -51,9 +51,9 @@ class EloquentEagerSample extends Command
         \DB::flushQueryLog();
 
         // Eagerローディング
-        $books = Book::with('author')->get();
+        $books = Book::with('author', 'publisher')->get();
         foreach ($books as $book) {
-            echo $book->author->name . PHP_EOL;
+            echo $book->author->name . ':' . $book->publisher->name . PHP_EOL;
         }
 
         var_dump(\DB::getQueryLog());
