@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Book;
 use Illuminate\Console\Command;
+use Illuminate\Database\Eloquent\Builder;
 
 class EloquentEagerSample extends Command
 {
@@ -51,11 +52,13 @@ class EloquentEagerSample extends Command
         \DB::flushQueryLog();
 
         // Eagerローディング
-        $books = Book::with('author', 'publisher')->get();
+        $books = Book::with(['author' => function ($query) {
+            $query->where('name', 'like', '%1%');
+        }, 'publisher'])->get();
         foreach ($books as $book) {
-            echo $book->author->name . ':' . $book->publisher->name . PHP_EOL;
+            echo (isset($book->author->name) ? $book->author->name : '') . ':' . $book->publisher->name . PHP_EOL;
         }
 
-        var_dump(\DB::getQueryLog());
+//        var_dump(\DB::getQueryLog());
     }
 }
