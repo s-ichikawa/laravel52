@@ -47,18 +47,31 @@ class EloquentEagerSample extends Command
             echo $book->author->name . PHP_EOL;
         }
 
-        var_dump(\DB::getQueryLog());
+//        var_dump(\DB::getQueryLog());
 
         \DB::flushQueryLog();
 
         // Eagerローディング
         $books = Book::with(['author' => function ($query) {
             $query->where('name', 'like', '%1%');
-        }, 'publisher'])->get();
+        }, 'publisher' => function ($query) {
+            $query->orderBy('id', 'desc');
+        }])->get();
         foreach ($books as $book) {
             echo (isset($book->author->name) ? $book->author->name : '') . ':' . $book->publisher->name . PHP_EOL;
         }
 
 //        var_dump(\DB::getQueryLog());
+
+        \DB::flushQueryLog();
+
+        // 遅延Eagerローディング
+        $books = Book::all();
+
+        var_dump(\DB::getQueryLog());
+
+        $books->load('author');
+
+        var_dump(\DB::getQueryLog());
     }
 }
