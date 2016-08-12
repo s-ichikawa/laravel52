@@ -54,7 +54,7 @@ class EloquentEagerSample extends Command
         // Eagerローディング
         $books = Book::with(['author' => function ($query) {
             $query->where('name', 'like', '%1%');
-        }, 'publisher' => function ($query) {
+        }, 'publisher'                => function ($query) {
             $query->orderBy('id', 'desc');
         }])->get();
         foreach ($books as $book) {
@@ -70,7 +70,9 @@ class EloquentEagerSample extends Command
 
         var_dump(\DB::getQueryLog());
 
-        $books->load('author');
+        $books->load(['author' => function ($query) {
+            $query->where('name', 'like', '%1%');
+        }]);
 
         var_dump(\DB::getQueryLog());
     }
