@@ -71,7 +71,7 @@ class EloquentEagerSample extends Command
         var_dump(\DB::getQueryLog());
 
         $books->load(['author' => function ($query) {
-            $query->where('name', 'like', '%1%');
+            $query->where('name', 'like', '%author%');
         }]);
 
         var_dump(\DB::getQueryLog());
