@@ -4,6 +4,7 @@ namespace App\Console;
 
 use App\Console\Commands\Batch;
 use App\Console\Commands\EloquentEagerSample;
+use App\Console\Commands\EloquentInsertingRelatedModel;
 use App\Console\Commands\EloquentSample;
 use App\Console\Commands\EventSearch;
 use App\Console\Commands\GuzzleAsync;
@@ -31,6 +32,7 @@ class Kernel extends ConsoleKernel
         GuzzleAsync::class,
         EloquentSample::class,
         EloquentEagerSample::class,
+        EloquentInsertingRelatedModel::class,
         OlympicLive::class,
     ];
 
