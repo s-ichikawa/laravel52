@@ -42,19 +42,24 @@ class SendGridSample extends Command
         $bench = new Ubench;
         $bench->start();
 
-        \Config::set('services.sendgrid.pretend', true);
+//        \Config::set('services.sendgrid.pretend', true);
         for ($i = 0; $i < 1; $i++) {
             $res = \Mail::send('emails.sendgrid_sample', [], function (Message $message) {
                 $message
                     ->subject('This is a test.')
-                    ->from('from@gmail.com')
-                    ->to('test@example.com')
+                    ->from('test@gmail.com')
+                    ->to('test@gmail.com')
                     ->embedData([
                         'categories' => ['user_group1'],
+                        'mail_settings' => [
+                            'sandbox_mode' => [
+                                'enable' => true
+                            ]
+                        ]
                     ], 'sendgrid/x-smtpapi');
             });
 
-            var_dump(...$res);
+            var_dump($res);
         }
 
         $bench->end();
