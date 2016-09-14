@@ -24,3 +24,5 @@ php artisan sendgrid:sample
 ConnpassのAPIからイベントデータ取得してElasticSearch入れてインクリメンタルサーチしてみた
 
 ![インクリメンタルサーチ](./IncrementalSearch.gif "インクリメンタルサーチ")
+
+# Docに書いてあるEloquentの機能を一通り使ってみる
