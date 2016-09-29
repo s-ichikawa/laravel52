@@ -32,5 +32,22 @@ class LineNotifyController extends Controller
     {
         \Log::debug(request('code'));
         \Log::debug(request('state'));
+
+        $uri = 'https://notify-bot.line.me/oauth/token';
+        $client = new Client();
+        $response = $client->post($uri, [
+            'headers'     => [
+                'Content-Type' => 'application/x-www-form-urlencoded',
+            ],
+            'form_params' => [
+                'grant_type'    => 'authorization_code',
+                'code'          => request('code'),
+                'redirect_uri'  => config('services.line_notify.redirect_uri'),
+                'client_id'     => config('services.line_notify.client_id'),
+                'client_secret' => config('services.line_notify.secret')
+            ]
+        ]);
+        \Log::debug($response->getBody());
+
     }
 }
