@@ -3,11 +3,6 @@
 namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use Socialite;
-use URL;
 
 class LineNotifyController extends Controller
 {
@@ -30,9 +25,6 @@ class LineNotifyController extends Controller
 
     public function handleProviderCallback()
     {
-        \Log::debug(request('code'));
-        \Log::debug(request('state'));
-
         $uri = 'https://notify-bot.line.me/oauth/token';
         $client = new Client();
         $response = $client->post($uri, [
