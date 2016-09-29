@@ -7,5 +7,6 @@
             メッセージ
             <input type="text" name="message" value="">
         </label>
+        <input type="submit" value="送信">
     </form>
 @endif
