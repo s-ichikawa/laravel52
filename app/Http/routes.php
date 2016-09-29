@@ -44,3 +44,9 @@ Route::get('guzzle', function () {
     sleep(5);
     return response("OK");
 });
+
+Route::group(['prefix' => 'notify'], function () {
+    Route::get('/', 'LineNotifyController@index');
+    Route::get('/auth', 'LineNotifyController@redirectToProvider');
+
+});

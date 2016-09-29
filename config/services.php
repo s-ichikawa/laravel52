@@ -20,7 +20,7 @@ return [
     ],
 
     'ses' => [
-        'key' => env('SES_KEY'),
+        'key'    => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
         'region' => 'us-east-1',
     ],
@@ -30,8 +30,8 @@ return [
     ],
 
     'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
+        'model'  => App\User::class,
+        'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
 
@@ -42,6 +42,11 @@ return [
 
     'slack' => [
         'channel' => env('SLACK_CHANNEL')
-    ]
+    ],
 
+    'line_notify' => [
+        'client_id' => env('LINE_NOTIFY_CLIENT_ID'),
+        'secret'    => env('LINE_NOTIFY_CLIENT_SECRET'),
+        'redirect_uri' => env('LINE_NOTIFY_CLIENT_CALLBACK_URI')
+    ]
 ];

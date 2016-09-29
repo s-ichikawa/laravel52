@@ -4,15 +4,22 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/Users/shingo_ichikawa/laravel-sendgrid-driver"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "barryvdh/laravel-ide-helper": "^2.2",
         "devster/ubench": "^1.2",
         "sleimanx2/plastic": "^0.1.5",
-        "s-ichikawa/laravel-sendgrid-driver": "dev-dev",
+        "s-ichikawa/laravel-sendgrid-driver": "dev-feature/simplified-service-provider",
         "fabpot/goutte": "^3.1",
-        "maknz/slack": "^1.7"
+        "maknz/slack": "^1.7",
+        "laravel/socialite": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

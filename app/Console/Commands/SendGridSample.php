@@ -47,15 +47,15 @@ class SendGridSample extends Command
             $res = \Mail::send('emails.sendgrid_sample', [], function (Message $message) {
                 $message
                     ->subject('This is a test.')
-                    ->from('test@gmail.com')
-                    ->to('test@gmail.com')
+                    ->from('ichikawa.shingo.0829@gmail.com')
+                    ->to('ichikawa.shingo.0829@gmail.com')
                     ->embedData([
                         'categories' => ['user_group1'],
-                        'mail_settings' => [
-                            'sandbox_mode' => [
-                                'enable' => true
-                            ]
-                        ]
+//                        'mail_settings' => [
+//                            'sandbox_mode' => [
+//                                'enable' => true
+//                            ]
+//                        ]
                     ], 'sendgrid/x-smtpapi');
             });
 

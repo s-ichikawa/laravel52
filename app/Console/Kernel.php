@@ -8,6 +8,7 @@ use App\Console\Commands\EloquentInsertingRelatedModel;
 use App\Console\Commands\EloquentSample;
 use App\Console\Commands\EventSearch;
 use App\Console\Commands\GuzzleAsync;
+use App\Console\Commands\LineNotifySample;
 use App\Console\Commands\OlympicLive;
 use App\Console\Commands\QueueTest;
 use App\Console\Commands\SendGridSample;
@@ -34,6 +35,7 @@ class Kernel extends ConsoleKernel
         EloquentEagerSample::class,
         EloquentInsertingRelatedModel::class,
         OlympicLive::class,
+        LineNotifySample::class,
     ];
 
     /**
