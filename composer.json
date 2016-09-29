@@ -16,7 +16,7 @@
         "barryvdh/laravel-ide-helper": "^2.2",
         "devster/ubench": "^1.2",
         "sleimanx2/plastic": "^0.1.5",
-        "s-ichikawa/laravel-sendgrid-driver": "dev-feature/simplified-service-provider",
+        "s-ichikawa/laravel-sendgrid-driver": "dev-master",
         "fabpot/goutte": "^3.1",
         "maknz/slack": "^1.7",
         "laravel/socialite": "^2.0"
