@@ -47,7 +47,23 @@ class LineNotifyController extends Controller
                 'client_secret' => config('services.line_notify.secret')
             ]
         ]);
-        \Log::debug($response->getBody());
+        $access_token = json_decode($response->getBody())->access_token;
+        \Session::set('access_token', $access_token);
+        return redirect('/notify');
+    }
 
+    public function send()
+    {
+        $uri = 'https://notify-api.line.me/api/notify';
+        $client = new Client();
+        $client->post($uri, [
+            'headers' => [
+                'Content-Type'  => 'application/x-www-form-urlencoded',
+                'Authorization' => 'Bearer ' . session('access_token'),
+            ],
+            'form_params' => [
+                'message' => request('message', 'Hello World!!')
+            ]
+        ]);
     }
 }
