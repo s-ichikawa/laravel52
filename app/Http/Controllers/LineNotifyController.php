@@ -65,5 +65,6 @@ class LineNotifyController extends Controller
                 'message' => request('message', 'Hello World!!')
             ]
         ]);
+        return redirect('/notify');
     }
 }
