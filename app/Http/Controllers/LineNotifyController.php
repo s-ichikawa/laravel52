@@ -30,8 +30,7 @@ class LineNotifyController extends Controller
 
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('line_notify')->user();
-
-        \Log::debug($user->token);
+        \Log::debug(request('code'));
+        \Log::debug(request('state'));
     }
 }
