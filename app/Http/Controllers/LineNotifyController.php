@@ -46,6 +46,7 @@ class LineNotifyController extends Controller
 
     public function send()
     {
+        \Log::notice(request('message'));
         $uri = 'https://notify-api.line.me/api/notify';
         $client = new Client();
         $client->post($uri, [
