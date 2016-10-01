@@ -45,12 +45,14 @@ Route::get('guzzle', function () {
     return response("OK");
 });
 
-//Route::group(['prefix' => 'notify'], function () {
-//    Route::get('/', 'LineNotifyController@index');
+Route::group(['prefix' => 'notify'], function () {
+    Route::get('/', function () {
+        return 'すいません。イタズラが多かったので停止しました。';
+    });
 //    Route::get('/auth', 'LineNotifyController@redirectToProvider');
 //    Route::post('/callback', 'LineNotifyController@handleProviderCallback');
 //    Route::post('/send', 'LineNotifyController@send');
-//});
+});
 
 Route::post('/sendgrid/event', function (\Illuminate\Http\Request $request) {
     Log::info($request->all());
