@@ -51,11 +51,7 @@ class SendGridSample extends Command
                     ->to('ichikawa.shingo.0829@gmail.com')
                     ->embedData([
                         'categories' => ['user_group1'],
-//                        'mail_settings' => [
-//                            'sandbox_mode' => [
-//                                'enable' => true
-//                            ]
-//                        ]
+//                        'personalizations'
                     ], 'sendgrid/x-smtpapi');
             });
 
