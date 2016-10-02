@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/mail', 'MailController@index');
+Route::post('/mail', 'MailController@send');
+
 Route::group(['prefix' => 'elasticsearch'], function () {
     Route::get('search', function () {
         $result = \App\Book::search()->match('id', '1')->get();

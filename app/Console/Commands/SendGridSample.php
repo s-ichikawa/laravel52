@@ -53,6 +53,7 @@ class SendGridSample extends Command
                     ->subject('This is a test.')
                     ->from('ichikawa.shingo.0829@gmail.com')
                     ->to('ichikawa.shingo.0829@gmail.com')
+                    ->attach(base_path('sample.pdf'))
                     ->embedData([
                         'categories'  => ['newsletter_1'],
                         'custom_args' => [
