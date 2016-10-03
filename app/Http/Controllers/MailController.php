@@ -20,7 +20,7 @@ class MailController extends Controller
             $message->subject('This is a test.');
 //            $message->subject($this->subject);
 
-//            $message->from('ichikawa.shingo.0829@gmail.com');
+            $message->from('ichikawa.shingo.0829@gmail.com');
 
             $message->to('ichikawa.shingo.0829@gmail.com');
 //            $message->to($this->recipie);
