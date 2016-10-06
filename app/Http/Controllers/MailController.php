@@ -18,13 +18,7 @@ class MailController extends Controller
     {
         Mail::send('emails.sendgrid_sample', [], function (Message $message) use ($request) {
             $message->subject('This is a test.');
-//            $message->subject($this->subject);
-
-//            $message->from('ichikawa.shingo.0829@gmail.com');
-
             $message->to('ichikawa.shingo.0829@gmail.com');
-//            $message->to($this->recipie);
-
             if ($request->hasFile('attachments')) {
                 foreach ($request->files as $attachment) {
                     $message->attach($attachment->getRealPath(), ['Vorbereitungsunterlage', 'application/pdf']);
