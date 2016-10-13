@@ -52,13 +52,25 @@ class SendGridSample extends Command
                 $message
                     ->subject('This is a test.')
                     ->from('ichikawa.shingo.0829@gmail.com')
-                    ->to('ichikawa.shingo.0829@gmail.com')
-                    ->attach(base_path('sample.pdf'))
+                    ->to([
+                        'ichikawa.shingo.0829@gmail.com'
+                    ])
                     ->embedData([
-                        'categories'  => ['newsletter_1'],
-                        'custom_args' => [
+                        'categories'       => ['newsletter_1'],
+                        'custom_args'      => [
                             'send_date' => $send_date,
                             'user_id'   => (string)$user->id,
+                        ],
+                        'personalizations' => [
+                            [
+                                'substitutions' => [
+                                    '%fname%' => 'recipient1',
+                                ],
+                                'custom_args' => [
+                                    'custom_args_1' => 'it is 1'
+                                ],
+                                'send_at' => Carbon::now()->addSeconds(10)->timestamp
+                            ],
                         ],
                     ], 'sendgrid/x-smtpapi');
             });
