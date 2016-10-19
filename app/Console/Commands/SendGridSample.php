@@ -55,6 +55,7 @@ class SendGridSample extends Command
                     ->to([
                         'ichikawa.shingo.0829@gmail.com'
                     ])
+                    ->replyTo('ichikawa.shingo.0829@gmail.com', 'おれだ！')
                     ->embedData([
                         'categories'       => ['newsletter_1'],
                         'custom_args'      => [

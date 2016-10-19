@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4e43e1ee85becdd47d674223a75042bf",
-    "content-hash": "abd8579335b667f9bbaa06c3644114c9",
+    "hash": "98d787f8b7e1cf1039624a9cfb9cbe07",
+    "content-hash": "320aa2407bbb9e880fdbef7ee0eae663",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1751,7 +1751,7 @@
         },
         {
             "name": "s-ichikawa/laravel-sendgrid-driver",
-            "version": "dev-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s-ichikawa/laravel-sendgrid-driver.git",
