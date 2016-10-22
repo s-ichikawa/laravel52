@@ -53,9 +53,9 @@ class SendGridSample extends Command
                     ->subject('This is a test.')
                     ->from('ichikawa.shingo.0829@gmail.com')
                     ->to([
-                        'ichikawa.shingo.0829@gmail.com'
+                        'ichikawa.shingo.0829@gmail.com',
                     ])
-                    ->replyTo('ichikawa.shingo.0829@gmail.com', 'おれだ！')
+                    ->replyTo('ichikawa.shingo.0829+replyto@gmail.com', 'おれだ！')
                     ->embedData([
                         'categories'       => ['newsletter_1'],
                         'custom_args'      => [
@@ -64,19 +64,41 @@ class SendGridSample extends Command
                         ],
                         'personalizations' => [
                             [
+                                'to'            => [
+                                    'email' => 'ichikawa.shingo.0829+test1@gmail.com',
+                                    'name'  => 'ichikawa1',
+                                ],
+                                'from' => [
+                                    'email' => 'ichikawa.shingo.0829@gmail.com'
+                                ],
+                                'subject' => 'subject1',
                                 'substitutions' => [
                                     '%fname%' => 'recipient1',
                                 ],
-                                'custom_args' => [
-                                    'custom_args_1' => 'it is 1'
+                                'custom_args'   => [
+                                    'custom_args_1' => 'it is 1',
                                 ],
-                                'send_at' => Carbon::now()->addSeconds(10)->timestamp
+                            ], [
+                                'to'            => [
+                                    'email' => 'ichikawa.shingo.0829+test2@gmail.com',
+                                    'name'  => 'ichikawa2',
+                                ],
+                                'from' => [
+                                    'email' => 'ichikawa.shingo.0829@gmail.com'
+                                ],
+                                'subject' => 'subject2',
+                                'substitutions' => [
+                                    '%fname%' => 'recipient2',
+                                ],
+                                'custom_args'   => [
+                                    'custom_args_1' => 'it is 2',
+                                ],
                             ],
                         ],
                     ], 'sendgrid/x-smtpapi');
             });
 
-            var_dump($res);
+//            print_r($res);
         }
 
         $bench->end();
