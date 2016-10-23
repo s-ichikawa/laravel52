@@ -1755,12 +1755,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/s-ichikawa/laravel-sendgrid-driver.git",
-                "reference": "1689a02ab1826392f2ebf378697df56135c23c36"
+                "reference": "7dcc0d67f7aa8b72725241765d1b11f5fbd1d355"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver/zipball/1689a02ab1826392f2ebf378697df56135c23c36",
-                "reference": "1689a02ab1826392f2ebf378697df56135c23c36",
+                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver/zipball/7dcc0d67f7aa8b72725241765d1b11f5fbd1d355",
+                "reference": "7dcc0d67f7aa8b72725241765d1b11f5fbd1d355",
                 "shasum": ""
             },
             "require": {
@@ -1789,7 +1789,7 @@
                 }
             ],
             "description": "This library adds a 'sendgrid' mail driver to Laravel.",
-            "time": "2016-10-20 13:35:26"
+            "time": "2016-10-20 14:00:16"
         },
         {
             "name": "sleimanx2/plastic",

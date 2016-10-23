@@ -62,6 +62,7 @@ class SendGridSample extends Command
                             'send_date' => $send_date,
                             'user_id'   => (string)$user->id,
                         ],
+                        'sandbox' => 1,
                         'personalizations' => [
                             [
                                 'to'            => [
@@ -77,21 +78,6 @@ class SendGridSample extends Command
                                 ],
                                 'custom_args'   => [
                                     'custom_args_1' => 'it is 1',
-                                ],
-                            ], [
-                                'to'            => [
-                                    'email' => 'ichikawa.shingo.0829+test2@gmail.com',
-                                    'name'  => 'ichikawa2',
-                                ],
-                                'from' => [
-                                    'email' => 'ichikawa.shingo.0829@gmail.com'
-                                ],
-                                'subject' => 'subject2',
-                                'substitutions' => [
-                                    '%fname%' => 'recipient2',
-                                ],
-                                'custom_args'   => [
-                                    'custom_args_1' => 'it is 2',
                                 ],
                             ],
                         ],
