@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9a28c2e68ec9f888a5248bb89f8ef46b",
-    "content-hash": "191ff92880657cdf57b50af2f51c2584",
+    "hash": "9f598149c217cfb87a0f33f785e70f32",
+    "content-hash": "1aaa762d98438b99be63f98ffcfcb9da",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1757,16 +1757,16 @@
         },
         {
             "name": "s-ichikawa/laravel-sendgrid-driver",
-            "version": "1.1.6",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s-ichikawa/laravel-sendgrid-driver.git",
-                "reference": "335027806771fa9717e345c4bb015855d4686c1d"
+                "reference": "4d04ba4726769fcf5dc5eaa9fb6e0863f38d035f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver/zipball/335027806771fa9717e345c4bb015855d4686c1d",
-                "reference": "335027806771fa9717e345c4bb015855d4686c1d",
+                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver/zipball/4d04ba4726769fcf5dc5eaa9fb6e0863f38d035f",
+                "reference": "4d04ba4726769fcf5dc5eaa9fb6e0863f38d035f",
                 "shasum": ""
             },
             "require": {
@@ -1774,9 +1774,12 @@
                 "illuminate/mail": "~5.1"
             },
             "require-dev": {
-                "illuminate/container": "~5.1.0",
-                "illuminate/filesystem": "~5.1.0",
+                "illuminate/container": "~5.1",
+                "illuminate/filesystem": "~5.1",
                 "phpunit/phpunit": ">=4.0"
+            },
+            "suggest": {
+                "s-ichikawa": "support to build json for sendgrid api"
             },
             "type": "library",
             "autoload": {
@@ -1795,7 +1798,7 @@
                 }
             ],
             "description": "This library adds a 'sendgrid' mail driver to Laravel.",
-            "time": "2017-01-12 12:52:43"
+            "time": "2017-01-30 14:35:32"
         },
         {
             "name": "sleimanx2/plastic",
@@ -3705,16 +3708,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.33",
+            "version": "4.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6381a99bd2a398d2994b454ad6d57c73f5a7de3d"
+                "reference": "7eb45205d27edd94bd2b3614085ea158bd1e2bca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6381a99bd2a398d2994b454ad6d57c73f5a7de3d",
-                "reference": "6381a99bd2a398d2994b454ad6d57c73f5a7de3d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7eb45205d27edd94bd2b3614085ea158bd1e2bca",
+                "reference": "7eb45205d27edd94bd2b3614085ea158bd1e2bca",
                 "shasum": ""
             },
             "require": {
@@ -3773,7 +3776,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-01-25 19:17:47"
+            "time": "2017-01-26 16:15:36"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -3833,16 +3836,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f"
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
                 "shasum": ""
             },
             "require": {
@@ -3893,7 +3896,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2016-11-19 09:18:40"
+            "time": "2017-01-29 09:50:25"
         },
         {
             "name": "sebastian/diff",

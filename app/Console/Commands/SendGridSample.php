@@ -56,32 +56,7 @@ class SendGridSample extends Command
                         'ichikawa.shingo.0829@gmail.com',
                     ])
                     ->replyTo('ichikawa.shingo.0829+replyto@gmail.com', 'おれだ！')
-                    ->embedData([
-                        'categories'       => ['newsletter_1'],
-                        'custom_args'      => [
-                            'send_date' => $send_date,
-                            'user_id'   => (string)$user->id,
-                        ],
-                        'sandbox' => 1,
-                        'personalizations' => [
-                            [
-                                'to'            => [
-                                    'email' => 'ichikawa.shingo.0829+test1@gmail.com',
-                                    'name'  => 'ichikawa1',
-                                ],
-                                'from' => [
-                                    'email' => 'ichikawa.shingo.0829@gmail.com'
-                                ],
-                                'subject' => 'subject1',
-                                'substitutions' => [
-                                    '%fname%' => 'recipient1',
-                                ],
-                                'custom_args'   => [
-                                    'custom_args_1' => 'it is 1',
-                                ],
-                            ],
-                        ],
-                    ], 'sendgrid/x-smtpapi');
+                    ;
             });
 
 //            print_r($res);
