@@ -48,7 +48,7 @@ class SendGridSample extends Command
         for ($i = 0; $i < 1; $i++) {
             $send_date = Carbon::today()->format('Y-m-d');
             $user = (object)['id' => 123];
-            $res = \Mail::send('emails.sendgrid_sample', [], function (Message $message) use ($user, $send_date) {
+            \Mail::send('emails.sendgrid_sample', [], function (Message $message) use ($user, $send_date) {
                 $message
                     ->subject('This is a test.')
                     ->from('ichikawa.shingo.0829@gmail.com')
