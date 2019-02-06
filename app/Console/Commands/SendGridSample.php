@@ -44,7 +44,6 @@ class SendGridSample extends Command
         $bench = new Ubench;
         $bench->start();
 
-//        \Config::set('services.sendgrid.pretend', true);
         for ($i = 0; $i < 1; $i++) {
             $send_date = Carbon::today()->format('Y-m-d');
             $user = (object)['id' => 123];
@@ -56,10 +55,8 @@ class SendGridSample extends Command
                         'ichikawa.shingo.0829@gmail.com',
                     ])
                     ->replyTo('ichikawa.shingo.0829+replyto@gmail.com', 'おれだ！')
-                    ;
+                    ->attach(resource_path('img/sample.png'));
             });
-
-//            print_r($res);
         }
 
         $bench->end();
